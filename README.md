@@ -1,4 +1,4 @@
-IDX Multi-Agent Real Estate Assistant
+***IDX Multi-Agent Real Estate Assistant***
 
 A multi-agent AI assistant built on OpenClaw that answers real estate questions over WhatsApp, backed by California MLS data. 
 
@@ -12,11 +12,11 @@ A multi-agent AI assistant built on OpenClaw that answers real estate questions 
 * Response: The model composes a reply, the session history is updated, and the gateway delivers the reply back through WhatsApp.
 
 
-Architecture Workflow
+**Architecture Workflow**
 
 
 
-Components 
+**Components** 
 * Gateway: long-running local process that hosts channels, sessions and agent runs. In this project it runs locally as a background service. (openclaw gateway start/stop/status)
 * Channels: How the user communicates with OpenClaw. In this project, the main channel is Whatsapp. ()
 * Sessions: Keeps track of user's conversation and state. ()
@@ -25,7 +25,7 @@ Components
 * Memory: Store info that OpenClaw might need when handling conversations. 
 * Orchestration: Deciding which capability handles a request. 
 
-Data
+**Data**
 Two tables that live in a local MySQL database:
 1. rets_property: active California MLS listings
 2. california_sold: sold/closed transactions 
