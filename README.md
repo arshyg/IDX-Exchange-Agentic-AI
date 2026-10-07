@@ -12,7 +12,7 @@ A multi-agent AI assistant built on OpenClaw that answers real estate questions 
 * Response: The model composes a reply, the session history is updated, and the gateway delivers the reply back through WhatsApp.
 
 
-**Architecture Workflow**
+**Architecture Workflow Diagram**
 
 
 
