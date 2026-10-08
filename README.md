@@ -13,7 +13,24 @@ A multi-agent AI assistant built on OpenClaw that answers real estate questions 
 
 
 **Architecture Workflow Diagram**
+## Architecture
 
+```mermaid
+flowchart LR
+    U(["User's phone"]) -->|WhatsApp message| WA["WhatsApp channel"]
+    WA -->|"allowlist check"| GW["OpenClaw Gateway<br/>(local process)"]
+    GW --> S["Session<br/>(conversation history)"]
+    S --> M["Agent model<br/>(Claude via claude-cli)"]
+    M -->|"picks skill by<br/>SKILL.md description"| SK["Skill<br/>(property-search, ...)"]
+    SK -->|"exec tool runs<br/>script"| SC["Script<br/>(parse-query.ts)"]
+    SC -->|"parameterized SQL<br/>(Week 3+)"| DB[("MySQL: idx_exchange<br/>rets_property · california_sold")]
+    DB --> SC
+    SC -->|"JSON result"| M
+    M -->|"reply"| S
+    S --> GW
+    GW --> WA
+    WA -->|"formatted reply"| U
+```
 
 
 **Components** 
