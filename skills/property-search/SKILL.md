@@ -1,21 +1,19 @@
 ---
 name: property-search
-description: Parses a natural-language California home search (city, price, beds, baths, sqft, type, pool, view) into structured filters.
+description: Converts a free-text California home search (city, price, beds, baths, sqft, type, pool, view) into a structured filter object.
 ---
 
-# Property Search (filter parser)
+# Property Search
 
-When the user describes homes they want to find (for example "3 bed condo in Irvine under $1.5M with a pool"), turn their request into a structured filter object by running the parser with the `exec` tool:
+When the user describes homes they want to find, use the `exec` tool to run:
 
 ```bash
-~/idx-agent/node_modules/.bin/tsx {baseDir}/scripts/parse-query.ts '<query>'
+/Users/arshiagupta/IDX-Exchange-Agentic-AI/node_modules/.bin/tsx {baseDir}/scripts/cli.ts '<query>'
 ```
 
 Rules for `<query>`:
-- Use only the search request itself, not the whole message.
-- Keep only letters, digits, spaces, and the characters `$ . , -`. Remove everything else, including quotes, before running the command.
+- Use only the search request, not the whole message.
+- Keep only letters, digits, spaces, and the characters `$ . , -`. Remove everything else, including quotes.
 - Always wrap it in single quotes.
 
-Return the JSON the script prints. Briefly list which filters were detected and which were not (null), and ask a follow-up question if no city or price was found.
-
-This skill only parses the request. It does not search listings yet.
+Return the JSON filter object the script prints. Unspecified filters are `null`.

@@ -1,0 +1,27 @@
+{
+  "name": "idx-exchange-agentic-ai",
+  "version": "1.0.0",
+  "description": "***IDX Multi-Agent Real Estate Assistant***",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsx tests/run-tests.ts",
+    "parse": "tsx skills/property-search/scripts/cli.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arshyg/IDX-Exchange-Agentic-AI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/arshyg/IDX-Exchange-Agentic-AI/issues"
+  },
+  "homepage": "https://github.com/arshyg/IDX-Exchange-Agentic-AI#readme",
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
