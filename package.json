@@ -23,5 +23,12 @@
     "@types/node": "^26.6.5",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "mysql2": "^3.24.6"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }
