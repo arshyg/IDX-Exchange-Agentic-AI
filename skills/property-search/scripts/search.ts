@@ -1,11 +1,3 @@
-/* The command the OpenClaw skill runs. It connects every piece of the
- *   pipeline in one call:
- *     free-text query → parsePropertyQuery (Week 2) → searchActiveListings
- *     (MySQL) → formatListingCard → printed property cards
- *   This is what makes the skill meet the Week 3 deliverable: it accepts NLP filters from Week 2, queries rets_property and/or california_sold, and
- *   returns formatted property cards.
-*/
-
 import { query } from "./db.ts";
 import type { PropertyFilters, ListingRow, SoldRow } from "./types.ts";
 

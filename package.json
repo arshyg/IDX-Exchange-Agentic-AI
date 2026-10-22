@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "tsx tests/run-tests.ts",
-    "parse": "tsx skills/property-search/scripts/cli.ts"
+    "test:whatsapp": "bash tests/whatsapp-test.sh",
+    "parse": "tsx skills/property-search/scripts/cli.ts --filters-only",
+    "search": "tsx skills/property-search/scripts/cli.ts"
   },
   "repository": {
     "type": "git",
